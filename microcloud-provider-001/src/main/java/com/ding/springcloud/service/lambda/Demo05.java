@@ -1,6 +1,8 @@
 package com.ding.springcloud.service.lambda;
 
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -144,5 +146,16 @@ public class Demo05 {
         System.out.println("List中最小的数字 : " + stats.getMin());
         System.out.println("所有数字的总和   : " + stats.getSum());
         System.out.println("所有数字的平均值 : " + stats.getAverage());
+
+
+
+         Predicate<Boolean> ab =(abb) -> 5>1;
+        HashSet a=new HashSet();
+        a.add(new String("1"));
+        ExecutorService pool = Executors.newSingleThreadExecutor();
+        ExecutorService pool3 = Executors.newFixedThreadPool(5);
+        ExecutorService pool2 = Executors.newCachedThreadPool();
+
+
     }
 }
